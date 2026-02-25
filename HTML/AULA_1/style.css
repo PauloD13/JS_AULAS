@@ -1,0 +1,133 @@
+body, html {
+    margin: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.box {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+/* Classe para esconder as telas */
+.hidden {
+    display: none;
+}
+
+h2 { color: #34495e; margin-bottom: 20px; }
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+button:hover { background: #219150; }
+
+.btn-group { display: flex; gap: 10px; }
+.btn-nao { background: #e74c3c; }
+.btn-nao:hover { background: #c0392b; }
+
+.erro { color: #e74c3c; font-size: 14px; margin-top: 10px; }
+
+img { width: 100%; border-radius: 8px; margin-top: 15px; }
+
+/* ... (mantenha o CSS anterior e adicione estes) ... */
+
+.btn-group-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn-trocar {
+    background: #3498db; /* Azul para diferenciar */
+}
+
+.btn-trocar:hover {
+    background: #2980b9;
+}
+
+.btn-sair {
+    background: #95a5a6;
+    font-size: 12px;
+    padding: 8px;
+}
+/* Adicione esta animação ao final do seu arquivo CSS */
+@keyframes jump {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.btn-click:after {
+    background: #c2222a;
+}
+
+
+.animar-pulo {
+    animation: jump 0.3s ease;
+}
+
+.animar-botao:active {
+    animation: giro-rapido 0.3s ease-in-out;
+}
+
+/* Animação de cores psicodélicas para o fundo */
+@keyframes  fundoFesta {
+    0% { background-color: #ff0000; }
+    25% { background-color: #00ff00; }
+    50% { background-color: #0000ff; }
+    75% { background-color: #ffff00; }
+    100% { background-color: #ff00ff; }
+}
+
+/* Rotação infinita para os botões */
+@keyframes girarInfinito {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Classe que será aplicada ao BODY via JS */
+.modo-festa-cor {
+    animation: fundoFesta 0.5s infinite alternate;
+}
+
+/* Classe para os botões girarem sem parar */
+.botao-girando {
+    animation: girarInfinito 1s infinite linear !important;
+}
+
+.btn-festa {
+    background: linear-gradient(45deg, #f39c12, #e74c3c);
+    margin-top: 10px;
+}

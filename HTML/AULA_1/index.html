@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Equino</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <section id="tela-login" class="box">
+            <h2>Login de Criador</h2>
+            <input type="text" id="usuario" placeholder="Usuário (admin)">
+            <input type="password" id="senha" placeholder="Senha (123)">
+            <button onclick="fazerLogin()">Entrar</button>
+            <p id="erro-login" class="erro"></p>
+        </section>
+
+        <section id="tela-verificacao" class="box hidden">
+            <h2>Verificação de Segurança</h2>
+            <p>Para continuar, responda com sinceridade:</p>
+            <p><strong>Você é realmente um cavalo?</strong></p>
+            <div class="btn-group">
+                <button class="btn-sim" onclick="confirmarCavalo(true)">Sim, Ihihih!</button>
+                <button class="btn-nao" onclick="confirmarCavalo(false)">Não, sou humano</button>
+            </div>
+        </section>
+
+        <section id="tela-final" class="box hidden">
+            <h2>Acesso Concedido!</h2>
+            
+            <img id="gif-cavalo" src="https://media.tenor.com/Bj7mc_5PflgAAAAM/horse-cavalo.gif" alt="Cavalo">
+            
+            <p>Bem-vindo ao estábulo VIP.</p>
+            
+            <div class="btn-group-vertical">
+                <button class="btn-trocar" onclick="trocarGif()">CAVALO!</button>
+                <audio id="som-relincho" src="C:\Users\ead\Documents\Demris\FRONT_END\HTML\AULA_1\cavalo-rodrigo-faro.mp3" type="audio/mpeg"></audio>
+                <button class="btn-sair" onclick="location.reload()">Sair</button>
+                <button id="btn-festa" class="btn-festa" onclick="alternarModoFesta()">CAVALAR</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
