@@ -1,0 +1,55 @@
+<!--Variaveis-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SITE TESTE</title>
+    <style>
+        body {
+            background-color: rgb(108, 113, 124);
+            color: brown;
+            font: normal 20pt Arial;
+        }
+        div {
+            background-color: aqua;
+            font: normal 15pt Times;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <div>
+        <p>Parágrafo div teste</p>
+        <p>Script na proxima div</p>
+    </div>
+    <div>
+        <p>Outra div, Script aqui</p>
+
+        <script>
+            //comentario em javascript
+            //window.alert('Bem vindo ao meu site teste');
+            //window.confirm('Caixa de confirmação, na pagina')
+            //var input = window.prompt('Coletar input pelo pop-up de janela')
+            //window.alert(`Você disse: ${input}`)
+
+            var n1 = prompt('Digite um número: ')
+            var n2 = prompt('Digite outro numero: ')
+
+            var s = Number(n1) + Number(n2)
+
+            //parseInt e parseFloat, converte em number
+            //number converte em number, porém com tipagem dinâmica.
+
+            alert(`A soma dos dois números é ${Number.parseInt(n1) + Number.parseInt(n2)}`)
+            alert(`A soma dos dois números é(Agora com tipagem dinâmica): ${Number(n1) + Number(n2)}`)
+            alert(`Em string denovo: ${typeof(String(s)) + String(s)}`)
+        /*
+        comentarios de 
+        */
+        </script>
+    </div>
+</body>
+</html>
