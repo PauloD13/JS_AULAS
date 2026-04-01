@@ -1,0 +1,49 @@
+<!--
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#container {
+            font: normal 20pt Arial;
+            background: rgb(155, 155, 155);
+            color: aliceblue;
+            width: 200px;
+            height: 200px;
+            line-height:  200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        clique...
+    </div>
+
+    <script>
+        var a = document.getElementById('container')
+        a.addEventListener('click', click1)
+        a.addEventListener('mouseenter', houver)
+        a.addEventListener('mouseout', unhouver)
+
+        function click1() {
+            a.innerText = 'Clicado'
+            a.style.background = 'rgb(70, 108, 211)'
+        }
+
+        function houver() {
+            a.innerText = 'Dentro'
+            a.style.background = 'green'
+        }
+
+        function unhouver() {
+            a.innerText = 'Clique...'
+            a.style.background = 'rgb(155, 155, 155)'
+        }
+    </script>
+
+</body>
+</html>
+-->

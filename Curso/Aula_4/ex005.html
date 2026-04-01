@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testes com DOM</title>
+    <style>
+        body {
+            background: rgb(161, 64, 64);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando com DOM</h1>
+    <p>Parágrafo</p>
+    <p>Primeiros passos com <strong>DOM</strong> em javascript</p>
+    <div id="msg">Clique aqui</div>
+    <p></p>
+    <script>
+        //window.document.body ---> estrutura da arvore DOM
+        var utf = window.document.charset // ---> Buscando valor atraves da arvore
+        //window.document.URL // ---> buscando o URL atraves do documente
+        window.document.write(utf) // ---> Adicionando componente ao document atraves da arvore DOM
+
+        var p1 = document.getElementsByTagName('p')[1] // ---> Zero especifica o elemento no caso o primeiro(0 = a primeiro elemento)
+        document.write(`<br/>Está escrito assim: ${p1.innerText}`)
+        var corpo = document.body // ---> Buscando o body paelo document
+
+        //Alterando os styles pelo selecao por marca
+        p1.style.color = 'black'
+        corpo.style.background = 'rgb(155, 155, 155)'
+
+        document.write('<br/>' + p1.innerText) // escrevendo o valor do texto
+        document.write('<br/>', p1.innerHTML) // Escrevendo o valor html, isto é, escrevendo a tag não só o conteud, com isso o valor vem formatado
+        
+        /*
+        var d = document.getElementById('msg') // ---> Selecionando a tag pelo id e mudando seus styles
+        d.style.background = 'black'
+        d.style.color = 'blue'
+        d.innerText = 'link'
+        */
+
+        /*
+        var d = document.getElementsByClassName('msg')[0]
+        d.innerText = 'Agora selcioando por classe'
+        */
+
+        /*
+        var d = document.getElementsByName('msg')[0]
+        d.innerText = 'E também por nome'
+        */
+
+        var d = document.querySelector('div#msg') // ---> selecionando por seletor com id. tag#id --> ID e tag.class --> class
+        d.style.color = 'blue'
+        d.innerText = 'Clique no link'
+
+   </script>
+</body>
+</html>

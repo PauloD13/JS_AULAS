@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculadora</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+            background: rgb(44, 34, 34);
+            color: rgba(210, 105, 30, 0.788);
+        }
+        input {
+            font: normal 18pt Arial;
+            background-color: rgb(194, 185, 185);
+            width: 100px;
+        }
+        div#res {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" onclick="somar()">
+
+    <div id="res">Resultado:</div>
+
+    <script>
+        //função de somar, coletando os valores por queryselector e transformando em number
+        function somar() {
+            var sn1 = document.querySelector('input#txtn1')
+            var sn2 = document.querySelector('input#txtn2')
+
+            var res = document.querySelector('div#res')
+
+            var s = Number(sn1.value) + Number(sn2.value)
+
+            res.innerHTML = `Resultado: ${s}`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<body>
+    Seu país: <input type="text" name="txp" id="txp">
+    <input type="button" value="Verificar" onclick="clicar()">
+    <div id="res"></div>
+
+    <script>
+        
+        function clicar() {
+            let txpais = document.querySelector('input#txp') 
+            let tpais = String(txpais.value)
+            let res = document.querySelector('div#res')
+
+            res.innerHTML = `<p>Você vem do(a): <strong>${tpais}</strong></p>`
+
+            if (tpais == "Brasil" || tpais == "Br" || tpais == "Brazil") {
+                res.innerHTML += `Você é <strong>Brasileiro</strong>`
+            } else {
+                res.innerHTML += `Você é <strong>Estrangeiro</strong>`
+            }
+
+            res.innerHTML += `<p>Seja bem vindo!</p>`
+            
+        }
+    </script>
+</body>
+</html>
